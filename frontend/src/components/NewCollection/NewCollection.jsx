@@ -6,7 +6,7 @@ const NewCollection = () => {
   const [newEvents, setNewEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/upcomingevents')
+    fetch('https://eventbackend-f53q.onrender.com/upcomingevents')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
