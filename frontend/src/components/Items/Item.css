@@ -1,0 +1,144 @@
+/* Default styles for larger screens */
+.item {
+    width: 320px;
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Default to fill the screen */
+    gap: 20px; /* Space between items */
+}
+
+.item img {
+    width: 300px;
+    height: 200px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-left: 10px; /* Reduced margin to center on larger screens */
+}
+
+.item p {
+    margin: 3px 0px;
+    margin-left: 50px;
+}
+
+.event-name {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.item-prices {
+    display: flex;
+    gap: 10px;
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: -10px; /* Slightly adjust for better spacing */
+}
+
+.item-price-old {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive styles for screens with max-width of 1280px */
+@media (max-width: 1280px) {
+    .item-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust the columns */
+    }
+    .item {
+        width: 280px; 
+    }
+
+    .item img {
+        width: 260px; /* Adjusted image size */
+        height: 180px; /* Slightly smaller height */
+        margin-left: 10px; /* Reduced margin for centering */
+    }
+
+    .item p {
+        margin-left: 30px; /* Adjust margin for name */
+    }
+
+    .item-price-new,
+    .item-price-old {
+        font-size: 16px; /* Slightly reduced text size */
+    }
+}
+
+/* For screens with a max-width of 800px, display 3 items per row */
+@media (max-width: 800px) {
+    .item-container {
+        grid-template-columns: repeat(4, 1fr); /* Display 3 items */
+    }
+    .item {
+        width: 160px;
+        font-size: 12px;
+    }
+
+    .item img {
+        width: 140px;
+        height: 100px;
+        margin-left: 10px; /* Further reduced margin */
+    }
+
+    .item p {
+        margin-left: 10px; /* Less margin for mobile layout */
+    }
+
+    .item-price-new {
+        font-size: 12px;
+        margin-left: 0px; /* Adjusted to fit mobile screens */
+    }
+
+    .item-price-old {
+        font-size: 12px;
+    }
+
+    .item-prices {
+        gap: 5px; /* Reduced gap between prices */
+    }
+}
+
+/* For screens with a max-width of 500px, display 2 items per row */
+@media (max-width: 500px) {
+    .item-container {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 items */
+    }
+    .item {
+        width: 160px; /* More compact layout for mobile */
+        font-size: 12px;
+    }
+
+    .item img {
+        width: 140px;
+        height: 100px;
+        margin-left: 10px; /* Further reduced margin */
+    }
+
+    .item p {
+        margin-left: 10px; /* Less margin for mobile layout */
+    }
+
+    .item-price-new {
+        font-size: 12px;
+        margin-left: 0px; /* Adjusted to fit mobile screens */
+    }
+
+    .item-price-old {
+        font-size: 12px;
+    }
+
+    .item-prices {
+        gap: 5px; /* Reduced gap between prices */
+    }
+}

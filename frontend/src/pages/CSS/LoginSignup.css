@@ -1,0 +1,114 @@
+.loginsighup{
+    width: 100%;
+    height: 100vh;
+    background: #fce3fe;
+    padding-top: 60px;
+}
+.loginsighnup-container{
+    width: 580px;
+    height: 600px;
+    background: white;
+    margin: auto;
+    padding: 10px 60px;
+}
+.loginsighnup-container h1{
+    margin: 20px 0px;
+}
+.loginsighup-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    margin-top: 10px;
+}
+.loginsighup-fields input{
+    height: 52px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+}
+.loginsighnup-container button{
+    
+    color: white;
+    background: #ff4141;
+    margin-top: 10px;
+    border:none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    /* margin-left: 190px; */
+}
+.loginsighup-login{
+    margin-top: 10px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+.loginsighup-login span{
+    color: #ff4141;
+    font-weight: 600;
+}
+.loginsignup-agree{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 20px;
+    color: #5c5c5c;
+    font-size: 18px;
+    font-weight: 500;
+}
+.loginsignup-agree .checkbox{
+    margin-top: -50px;
+    height: 20px;
+    width: 20px;
+}
+.loginsignup-agree p{
+    margin-top: -50px;
+    margin-left: -10px;
+}
+@media(max-width:1280px){
+    .loginsighup{
+        padding-top: 50px;
+    }
+    .loginsighnup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .loginsighnup-container h1{
+        margin: 10px 0px;
+    }
+    .loginsighup-fields{
+        gap:20px;
+        margin-top: 20px;
+    }
+    .loginsighup-fields input{
+        height: 65px;
+        width: 93%;
+    }
+    .loginsighnup-container button{
+        width: 120px;
+        border-radius: 20px;
+    }
+}
+@media(max-width:800px)
+{
+    .loginsighnup-container{
+        padding: 20px;
+    }
+    .loginsighnup-container h1{
+        font-size: 24px;
+    }
+    .loginsighup-fields{
+        margin-top: 20px;
+    }
+    .loginsighup-fields input{
+        height: 50px;
+    }
+    .loginsighnup-container button{
+        height: 50px;
+        
+    }
+}

@@ -1,0 +1,28 @@
+.descbox{
+    margin: 80px 170px;
+}
+.descboxnavigator{
+    display: flex;
+}
+.decbox-navbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 60px;
+    border: 1px solid #d0d0d0;
+}
+.decbox-navbox.fade{
+    background: #FBFBFB;
+    color: #555;
+}
+.descbox-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid #D0D0D0;
+    padding: 48px;
+    padding-bottom: 70px;
+}

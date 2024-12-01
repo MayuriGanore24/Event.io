@@ -1,0 +1,23 @@
+.relatedevents{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 90vh;
+    align-items: center;
+}
+.relatedevents h1{
+    color: #171717;
+    font-size: 40px;
+    font-weight: 600;
+}
+.relatedevents hr{
+    width: 200px;
+    height: 4px;
+    border-radius: 10px;
+    background:#252525;
+}
+.relatedevents-item{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
