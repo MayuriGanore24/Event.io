@@ -11,6 +11,11 @@ app.use(express.json());
 app.use(cors()); 
 //connection with mongodb
 mongoose.connect("mongodb+srv://Mayuri:Mayuri@eventio.bfkto.mongodb.net/EventIo?retryWrites=true&w=majority")
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  tls: true, // Ensure TLS is enabled
+});
 //scema for event scheduling
 const Event=mongoose.model("event",{
     id:{
