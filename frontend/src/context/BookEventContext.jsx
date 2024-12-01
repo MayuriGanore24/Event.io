@@ -13,7 +13,7 @@ const getDefaultCart = () => {
 const BookEventContextProvider = (props) => {
   const [all_events, setAllEvents] = useState([]);
   const [cartItem, setCartItem] = useState(getDefaultCart());
-  const baseUrl = "http://localhost:4000"; // Base URL
+  const baseUrl = "https://eventbackend-f53q.onrender.com"; 
 
   useEffect(() => {
     // Fetch all events
