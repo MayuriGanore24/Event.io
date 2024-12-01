@@ -16,7 +16,7 @@ const LoginSignup = () => {
   const login=async()=>{
       console.log("Login Function executed",formdata)
       let responseData;
-    await fetch("http://localhost:4000/login",{
+    await fetch("https://eventbackend-f53q.onrender.com/login",{
       method:'POST',
       headers:{
         Accept:"application/json",
@@ -36,7 +36,7 @@ const LoginSignup = () => {
   const signup=async()=>{
     console.log("Signup Function executed",formdata)
     let responseData;
-    await fetch("http://localhost:4000/signup",{
+    await fetch("https://eventbackend-f53q.onrender.com/signup",{
       method:'POST',
       headers:{
         Accept:"application/json",
