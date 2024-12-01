@@ -10,7 +10,7 @@ const { Console } = require('console');
 app.use(express.json());
 app.use(cors()); 
 //connection with mongodb
-mongoose.connect("mongodb+srv://Mayuri:Mayuri@eventio.bfkto.mongodb.net/EventIo")
+mongoose.connect("mongodb+srv://Mayuri:Mayuri@eventio.bfkto.mongodb.net/EventIo?retryWrites=true&w=majority")
 //scema for event scheduling
 const Event=mongoose.model("event",{
     id:{
