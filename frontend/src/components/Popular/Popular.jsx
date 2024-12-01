@@ -1,25 +1,36 @@
-import React, { useEffect, useState } from 'react'
-import "./Popular.css"
-import Item from '../Items/Item'
-// import data_product from "../../assets/Assets/Frontend_Assets/data"
+import React, { useEffect, useState } from 'react';
+import './Popular.css';
+import Item from '../Items/Item';
+
 const Popular = () => {
-  const [popularEvents,setPopularEvents] =useState([]);
-  useEffect(()=>{
-    fetch("https://eventbackend-f53q.onrender.com/popularinSports")
-    .then((response=>response.json()))
-    .then((data)=>setPopularEvents(data))
-  },[])
+  const [popularEvents, setPopularEvents] = useState([]);
+  const baseUrl = 'https://eventbackend-f53q.onrender.com'; // Base URL
+
+  useEffect(() => {
+    fetch(`${baseUrl}/popularinSports`)
+      .then((response) => response.json())
+      .then((data) => setPopularEvents(data))
+      .catch((error) => console.error('Error fetching popular events:', error));
+  }, []);
+
   return (
-    <div className='popular'>
+    <div className="popular">
       <h1>Popular Sports Events</h1>
-      <hr/>
+      <hr />
       <div className="popular-item">
-        {popularEvents.map((item,i)=>{
-            return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
-        })}
+        {popularEvents.map((item, i) => (
+          <Item
+            key={i}
+            id={item.id}
+            name={item.name}
+            image={item.image}
+            new_price={item.new_price}
+            old_price={item.old_price}
+          />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Popular
+export default Popular;
