@@ -23,7 +23,7 @@ const Addevent = () => {
       let event=eventdetails;
       let formData=new FormData();
       formData.append('event',image);
-      await fetch('http://localhost:4000/upload',{
+      await fetch('https://eventbackend-f53q.onrender.com/upload',{
         method:'POST',
         headers:{
           Accept:"application/json"
@@ -34,7 +34,7 @@ const Addevent = () => {
       {
         event.image=responseData.image_url;
         console.log(event)
-        await fetch('http://localhost:4000/addevent',{
+        await fetch('https://eventbackend-f53q.onrender.com/addevent',{
           method:'POST',
           headers:{
             Accept:"application/json",
