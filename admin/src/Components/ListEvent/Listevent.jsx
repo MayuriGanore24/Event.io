@@ -7,7 +7,7 @@ import cross_icon from "../../Admin_Assets/cross_icon.png"
 const Listevent = () => {
   const [allevents, setallevents]=useState([]);
   const fetchInfo=async()=>{
-    await fetch("http://localhost:4000/allevents")
+    await fetch("https://eventbackend-f53q.onrender.com/allevents")
     .then((res)=>res.json())
     .then((data)=>{setallevents(data)})
   }
@@ -15,7 +15,7 @@ const Listevent = () => {
     fetchInfo();
   },[])
   const removeEvent=async(id)=>{
-    await fetch("http://localhost:4000/removeevent",{
+    await fetch("https://eventbackend-f53q.onrender.com/removeevent",{
       method:'POST',
       headers:{
         Accept:'application/json',
