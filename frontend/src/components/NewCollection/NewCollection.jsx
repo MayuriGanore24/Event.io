@@ -4,9 +4,10 @@ import Item from '../Items/Item';
 
 const NewCollection = () => {
   const [newEvents, setNewEvents] = useState([]);
+  const baseUrl = 'https://eventbackend-f53q.onrender.com'; // Base URL
 
   useEffect(() => {
-    fetch('https://eventbackend-f53q.onrender.com/upcomingevents')
+    fetch(`${baseUrl}/upcomingevents`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -14,7 +15,7 @@ const NewCollection = () => {
         return response.json();
       })
       .then((data) => setNewEvents(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => console.error('Error fetching upcoming events:', error));
   }, []);
 
   return (
