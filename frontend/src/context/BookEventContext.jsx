@@ -13,11 +13,11 @@ const BookEventContextProvider=(props)=>{
     const [all_events,setAllEvents]=useState([]);
     const [cartItem,setCartItem]=useState(getDefaultcart());
     useEffect(()=>{
-        fetch("http://localhost:4000/allevents")
+        fetch("https://eventbackend-f53q.onrender.com/allevents")
         .then((response)=>response.json())
         .then((data)=>setAllEvents(data))
         if(localStorage.getItem("auth_token")){
-            fetch("http://localhost:4000/getcart",{
+            fetch("https://eventbackend-f53q.onrender.com/getcart",{
                 method:"POST",
                 headers:{
                     Accept:'application/form-data',
@@ -33,7 +33,7 @@ const BookEventContextProvider=(props)=>{
     const addtoCart=(ItemId)=>{
         setCartItem((prev)=>({...prev,[ItemId]:prev[ItemId]+1}))
         if (localStorage.getItem('auth_token')){
-            fetch("http://localhost:4000/addtocart",{
+            fetch("https://eventbackend-f53q.onrender.com/addtocart",{
                 method:"POST",
                 headers:{
                     Accept:'application/form-data',
@@ -49,7 +49,7 @@ const BookEventContextProvider=(props)=>{
     const removeFromCart=(ItemId)=>{
         setCartItem((prev)=>({...prev,[ItemId]:prev[ItemId]-1}))
         if(localStorage.getItem('auth_token')){
-            fetch("http://localhost:4000/removefromcart",{
+            fetch("https://eventbackend-f53q.onrender.com/removefromcart",{
                 method:"POST",
                 headers:{
                     Accept:'application/form-data',
