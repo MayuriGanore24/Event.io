@@ -7,7 +7,7 @@ const Addevent = () => {
   const [eventdetails,seteventdetails]=useState({
     name:"",
     image:"",
-    category:"sports",
+    category:"Sports",
     old_price:"",
     new_price:""
   });
