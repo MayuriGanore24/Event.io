@@ -66,10 +66,10 @@ const Addevent = () => {
       <div className="addevent-itemfield">
         <p>Event Category</p>
         <select value={eventdetails.category} onChange={changeHandler} name="category" className='addeventselector'>
-          <option value="sports">Sports</option>
-          <option value="competitions">Competitions</option>
-          <option value="cultural">Cultural</option>
-          <option value="technical">Technical</option>
+          <option value="Sports">Sports</option>
+          <option value="Competition">Competition</option>
+          <option value="Technical">Technical</option>
+          <option value="Cultural">Cultural</option>
         </select>
       </div>
       <div className="addevent-itemfield">
